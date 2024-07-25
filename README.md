@@ -1,4 +1,4 @@
-<h2> A simple html for running NASA TLX</h2>
+<h2> A simple web script for running NASA TLX</h2>
 
 <p>Based on KeithV's NASA-TLX in HTML and JavaScript (https://www.keithv.com/software/nasatlx/) but made dark and added some features, namely an unweighted option.</p>
 <br />
