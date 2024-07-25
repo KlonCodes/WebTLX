@@ -1,0 +1,298 @@
+td.bottom {
+    width: 0.6cm;
+    height: 0.4cm;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    border-left: 1px solid rgb(255, 255, 255);
+    border-right: 1px solid rgb(255, 255, 255);
+    margin: 0px;
+    padding: 0px 0px 0px 0px;
+
+}
+
+table.scale {
+    margin: 0px;
+    padding: 0px 0px 0px 0px;
+    border-collapse: collapse
+}
+
+td.top1 {
+    width: 0.6cm;
+    height: 0.4cm;
+    border-top: 1px solid rgb(255, 255, 255);
+    border-left: 1px solid rgb(255, 255, 255);
+    margin: 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+td.top2 {
+    width: 0.6cm;
+    height: 0.4cm;
+    border-top: 1px solid rgb(255, 255, 255);
+    border-right: 1px solid rgb(255, 255, 255);
+    margin: 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+td.heading {
+    font: Bold 14px Inter;
+    text-align: center;
+}
+
+td.left {
+    font: 14px Inter;
+}
+
+td.right {
+    font: 14px Inter;
+    text-align: right;
+}
+
+td.def {
+    width: 12cm;
+    padding: 20px 1px 1px 20px;
+    font: 12px Inter;
+    text-align: justify;
+}
+
+input.pair {
+    width: 5cm;
+    height: 2cm;
+    font: Bold 14px;
+
+}
+
+input.next {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    float: right;
+
+    align-items: center;
+    background-image: linear-gradient(144deg, #7a1abe, #452de7 45%, #00eb8d);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    padding: 19px 24px;
+
+    font-size: 20px;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 140px;
+}
+
+input.next:hover {
+    transform: scale(1.05);
+    background-image: linear-gradient(144deg, #7a1abe, #452de7 35%, #00eb8d);
+    -webkit-transition: background-image 0.2s ease-in-out;
+    transition: background-image 0.2s ease-in-out;
+}
+
+input.next:active {
+    box-shadow: 0 5px #030114;
+    transform: translateY(4px);
+}
+
+body {
+    font-family: Inter;
+    background-color: black;
+    color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div#banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(144deg, #7a1abe, #452de7 25%, #00eb8d);
+    width: 100%;
+}
+
+div#banner-content {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+div#main-content {
+    padding-top: 90px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+
+.userInfo {
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, .5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    border-radius: 10px;
+}
+
+.userInfo .user-box {
+    position: relative;
+}
+
+.userInfo .user-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+
+}
+
+.userInfo .user-buttons .weight {
+    align-items: center;
+    background-image: linear-gradient(144deg, #7a1abe);
+    border: 5;
+    border-radius: 8px;
+    background-color: black;
+    box-sizing: border-box;
+    color: white;
+    padding: 10px 10px;
+
+    font-size: 14px;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 40%;
+    min-width: 140px;
+}
+
+.userInfo .user-buttons .weight:hover {
+    transform: scale(1.05);
+    -webkit-transition: background-image 0.2s ease-in-out;
+    transition: background-image 0.2s ease-in-out;
+}
+
+.userInfo .user-buttons .weight:active {
+    transform: translateY(4px);
+}
+
+
+.userInfo .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+.userInfo .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.userInfo .user-box input:focus~label,
+.userInfo .user-box input:valid~label {
+    top: -20px;
+    left: 0;
+    color: #6e8afa;
+    font-size: 12px;
+}
+
+.userInfo form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #6e8afa;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px
+}
+
+#weightingText.active {
+    top: -20px;
+    left: 0;
+    color: #6e8afa;
+    font-size: 12px;
+    position: relative;
+    /* Add this to ensure the text moves */
+}
+
+#div_part4 td {
+    width: 10em;
+
+}
+
+#div_part1 {
+    margin-top: auto;
+    margin-bottom: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+#div_part2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+
+}
+
+#div_part3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+
+}
+
+#div_part4 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+
+}

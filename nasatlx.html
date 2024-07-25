@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Nasa TLX</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="jsdata.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+
+    <!-- Font Import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body onLoad="onLoad();">
+
+    <div id="div_part0">
+        <div id="banner">
+            <div id="banner-content">
+                <h2>NASA TLX</h2>
+            </div>
+        </div>
+        <div id="main-content">
+            <div class="userInfo">
+                <form id="form" onsubmit="return false;">
+                    <div class="user-box">
+                        <input autocomplete="off" type="text" name="uID" id="uID" required="">
+                        <label>Participant ID</label>
+                    </div>
+                    <div class="user-box">
+                        <input autocomplete="off" type="text" name="uCon" id="uCon" required="">
+                        <label>Condition Number</label>
+
+                    </div>
+                </form>
+                <p id="weightingText">Weighting:</p>
+                <div class="user-buttons">
+                    <br>
+                    <input class="weight" id="uwyes" type="button" value="ON" onClick="weightButton(true)">
+                    <input class="weight" id="uwno" type="button" value="OFF" onClick="weightButton(false)">
+                </div>
+            </div>
+        </div>
+        <br />
+        <input class=" next" id="next" type="button" value="BEGIN" onClick="buttonPart0();">
+    </div>
+    </div>
+    <div id="div_part1" style="display: none">
+        <div id="banner">
+            <div id="banner-content">
+
+                <h2>Task Questionnaire </h2>
+            </div>
+        </div>
+        <div id="main-content">
+            Click on each scale at the point that best indicates your experience of the task <br />
+            <br />
+            <div id="scale0"></div>
+            <div id="scale1"></div>
+            <div id="scale2"></div>
+            <div id="scale3"></div>
+            <div id="scale4"></div>
+            <div id="scale5"></div>
+            <br />
+            <input class="next" id="next" type="button" value="CONTINUE" onClick="buttonPart1();">
+        </div>
+    </div>
+    <div id="div_part2" style="display:none">
+        <div id="banner">
+            <div id="banner-content">
+                <h2>Weighting</h2>
+            </div>
+        </div>
+        <div id="main-content" style="text-align: center;">
+            <h4>One each of the following 15 screens: </h4><br />
+            <p>Click on the scale title that represents the more important contributor to workload for the task.</p>
+            <br />
+            <input class="next" id="next" type="button" value="CONTINUE" onClick="buttonPart2();">
+
+        </div>
+    </div>
+    <div id="div_part3" style="display:none">
+        <div id="banner">
+            <div id="banner-content">
+                <h2>Weighting</h2>
+            </div>
+        </div>
+        <div id="main-content">
+            <table>
+                <tr>
+                    <td><input class="pair" id="pair1" type="button" value onClick="buttonPair1();"> </td>
+                    <td class="def">
+                        <div id="pair1_def"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center"> or </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><input class="pair" id="pair2" type="button" value onClick="buttonPair2();"></td>
+                    <td class="def">
+                        <div id="pair2_def"></div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+    <div id="div_part4" style="display:none">
+        <div id="banner">
+            <div id="banner-content">
+                <h2>Results</h2>
+            </div>
+        </div>
+        <div id="main-content">
+            <div id="ressies">
+            </div>
+
+            <input class="next" id="next" type="button" value="RESTART" onClick="window.location.reload();"">
+    </div>
+    </div>
+</body>
+
+</html>
