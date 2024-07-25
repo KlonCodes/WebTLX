@@ -259,6 +259,9 @@ function calcResults() {
         results_weight[i] = results_tally[i] / 15.0;
         results_overall += results_weight[i] * results_rating[i];
     }
+
+        // Call the function to write results to CSV
+        writeResultsToCSV();
 }
 
 // Compute the weights and the final score
@@ -269,6 +272,7 @@ function calcResultsNoWeights() {
         results_tally[i] / 15.0;
         results_overall += 1 * results_rating[i] / NUM_SCALES;
     }
+    writeResultsToCSVNoWeights();
 }
 
 // Output the table of results
@@ -363,4 +367,34 @@ function nextPair() {
     else {
         setPairLabels();
     }
+}
+
+function writeResultsToCSV() {
+
+    let csvContent = "Scale,Rating,Tally,Weight\n";
+    for (let i = 0; i < NUM_SCALES; i++) {
+        csvContent += `${scale[i]},${results_rating[i]},${results_tally[i]},${results_weight[i]}\n`;
+    }
+    csvContent += `Overall,,${results_overall}\n`;
+
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+
+    const fileName = `TLX_p-${uID}_c-${uCon}.csv`;
+    saveAs(blob, fileName);
+}
+
+function writeResultsToCSVNoWeights() {
+    // Prepare CSV content
+    let csvContent = "Scale,Rating,Tally\n";
+    for (let i = 0; i < NUM_SCALES; i++) {
+        csvContent += `${scale[i]},${results_rating[i]},${results_tally[i]}\n`;
+    }
+    csvContent += `Overall,,${results_overall}\n`;
+
+    // Convert CSV content to a Blob
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+
+    // Use FileSaver.js to save the file with the new naming convention
+    const fileName = `TLX_p-${uID}_c-${uCon}.csv`;
+    saveAs(blob, fileName);
 }

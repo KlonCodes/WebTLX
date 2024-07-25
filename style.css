@@ -226,10 +226,7 @@ div#main-content {
 }
 
 #weightingText.active {
-    top: -20px;
-    left: 0;
     color: #6e8afa;
-    font-size: 12px;
     position: relative;
     /* Add this to ensure the text moves */
 }
