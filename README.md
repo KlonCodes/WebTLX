@@ -1,4 +1,4 @@
-<h2> A simple web script for running NASA TLX</h2>
+<h2> A Simple Web Script for running NASA TLX</h2>
 
 <p>Based on Keith Vertanen's NASA-TLX application with some changes</p>
 <ul>
