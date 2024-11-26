@@ -1,6 +1,12 @@
 <h2> A simple web script for running NASA TLX</h2>
 
-<p>Based on Keith Vertanen's NASA-TLX in HTML and JavaScript (https://www.keithv.com/software/nasatlx/) but made dark and added some features, namely a shorter unweighted option.</p>
+<p>Based on Keith Vertanen's NASA-TLX application with some changes</p>
+<ul>
+  <li>Participant and Condition IDs</li>
+  <li>Updated UI: Dark Theme</li>
+  <li>Weighting Toggle</li>
+  <li>CSV Output</li>
+</ul>
 <br />
 Hosted here: https://klontlx.pages.dev/
 <br />
