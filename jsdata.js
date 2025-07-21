@@ -263,6 +263,17 @@ function buttonPair2() {
     return true;
 }
 
+window.addEventListener('keydown', function(e) {
+    if (document.getElementById('div_part3').style.display !== 'none') {
+        if (e.key === '1') {
+            buttonPair1();
+        } else if (e.key === '2') {
+            buttonPair2();
+        }
+    }
+});
+
+
 // Compute the weights and the final score
 function calcResults() {
     results_overall = 0.0;
