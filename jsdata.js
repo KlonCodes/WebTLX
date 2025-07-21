@@ -154,10 +154,22 @@ function weightButton(value) {
     weighting = value;
 
     document.getElementById('weightingText').classList.add('active');
-    // Update button styles to indicate selection
-    document.getElementById('uwyes').style.backgroundColor = value ? '#179864' : '';
-    document.getElementById('uwno').style.backgroundColor = value ? '' : '#aa2b2b';
+
+    const yesButton = document.getElementById('uwyes');
+    const noButton = document.getElementById('uwno');
+
+    // Clear both styles
+    yesButton.classList.remove('selected-yes');
+    noButton.classList.remove('selected-no');
+
+    // Add selected style
+    if (value) {
+        yesButton.classList.add('selected-yes');
+    } else {
+        noButton.classList.add('selected-no');
+    }
 }
+
 
 // Users want to proceed after doing the scales
 function buttonPart0() {
