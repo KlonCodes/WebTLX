@@ -169,6 +169,18 @@ div#main-content {
     min-width: 140px;
 }
 
+/* Highlight ON button in green */
+.weight.selected-yes {
+    background-color: #179864 !important;
+    background-image: none !important;
+}
+
+/* Highlight OFF button in red */
+.weight.selected-no {
+    background-color: #aa2b2b !important;
+    background-image: none !important;
+}
+
 .userInfo .user-buttons .weight:hover {
     transform: scale(1.05);
     -webkit-transition: background-image 0.2s ease-in-out;
